@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.crnk:crnk-test:2.4.20171208083740">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/crnk/crnk-test/2.4.20171208083740/crnk-test-2.4.20171208083740.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/crnk/crnk-test/2.4.20171208083740/crnk-test-2.4.20171208083740-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/crnk/crnk-test/2.4.20171208083740/crnk-test-2.4.20171208083740-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
