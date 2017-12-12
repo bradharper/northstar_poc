@@ -26,108 +26,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * {
- * "data": [
- * {
- * "type": "accounts",
- * "id": "10850",
- * "attributes": {
- * "cfiid": "7825610",
- * "availableBalancePvtEncrypt": 252188,
- * "accountStatus": "Active",
- * "currentBalancePvtEncrypt": 252188,
- * "interestYtd": 1268.62,
- * "accountOpeningDate": "2016-07-27T00:00:00-04:00",
- * "bankName": "Ally",
- * "apy": 1.05,
- * "externalAccountIndicator": false,
- * "transferFromIndicator": true,
- * "transferToIndicator": true,
- * "retirementIndicator": false,
- * "rdcEligibilityIndicator": true,
- * "accountNumberPvtEncrypt": "2148594225",
- * "accountType": "SDA",
- * "accountNickname": "Savings Sample",
- * "ownershipType": "B"
- * },
- * "links":{
- * "self": "https://bankapi-dev3.ally.corp/accounts/10850"
- * },
- * "relationships":{
- * "product":{
- * "links":{
- * "self": "https://bankapi-dev3.ally.corp/accounts/10850/relationships/product",
- * "related": "https://bankapi-dev3.ally.corp/product/4107"
- * },
- * "data": { "type": "products", "id": "4107" }
- * }
- * }
- * },
- * {
- * "type": "accounts",
- * "id": "10851",
- * "attributes": {
- * "cfiid": "7825612",
- * "availableBalancePvtEncrypt": 12789,
- * "accountStatus": "Active",
- * "currentBalancePvtEncrypt": 12789,
- * "interestYtd": 12.34,
- * "accountOpeningDate": "2017-11-10T00:00:00-04:00",
- * "bankName": "Ally",
- * "apy": 0.60,
- * "externalAccountIndicator": false,
- * "transferFromIndicator": true,
- * "transferToIndicator": true,
- * "retirementIndicator": false,
- * "rdcEligibilityIndicator": true,
- * "accountNumberPvtEncrypt": "2149592389",
- * "accountType": "DDA",
- * "accountNickname": "Checking Sample",
- * "ownershipType": "B"
- * },
- * "links":{
- * "self": "https://bankapi-dev3.ally.corp/accounts/10851"
- * },
- * "relationships":{
- * "product":{
- * "links":{
- * "self": "https://bankapi-dev3.ally.corp/accounts/10850/relationships/product",
- * "related": "https://bankapi-dev3.ally.corp/products/4004"
- * },
- * "data": { "type": "products", "id": "4004" }
- * }
- * }
- * }
- * ],
- * "included": [{
- * "type": "products",
- * "id": "4107",
- * "attributes": {
- * "description":"Online Savings Account"
- * },
- * "links": {
- * "self": "https://bankapi-dev3.ally.corp/products/4107"
- * }
- * },
- * {
- * "type": "products",
- * "id": "4004",
- * "attributes": {
- * "description": "Interest Checking Account"
- * },
- * "links": {
- * "self": "https://bankapi-dev3.ally.corp/products/4004"
- * }
- * }
- * }
- * ]
+ * Help me Obiwan, you're my only hope...
+ * <p>
+ * <p>
+ *
+ * @author bradharper
+ * @version 2.0
+ * @created 12/12/17 9:23 AM
  */
 @JsonApiResource(type = "accounts")
-public class Account {
-
-
-    @JsonApiId
-    private Long id;
+public class Account extends Model {
 
     @JsonProperty
     private String name;
@@ -167,8 +75,6 @@ public class Account {
     @JsonProperty
     private String ownershipType;
 
-
-
     @JsonApiToMany(opposite = "account")
     private List<Product> products = new ArrayList<>();
 
@@ -182,14 +88,6 @@ public class Account {
     public Account(Long id, String name) {
         this.id = id;
         this.name = name;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
